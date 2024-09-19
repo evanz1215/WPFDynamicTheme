@@ -1,13 +1,13 @@
 ﻿<Window x:Class="WPFDynamicTheme.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPFDynamicTheme"
+        xmlns:theme="clr-namespace:WPFDynamicTheme.Core;assembly=WPFDynamicTheme.Core"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel Background="{DynamicResource BackgroundBrush}">
+    <StackPanel  theme:ThemeProps.Background="{DynamicResource BackgroundBrush}">
         <ToggleButton x:Name="Switch" />
-        <TextBlock Foreground="{DynamicResource FontBrush}" Text="Hello World!" FontWeight="Bold" FontSize="30" Margin="10" />
+        <TextBlock theme:ThemeProps.Foreground="{DynamicResource FontBrush}" Text="Hello World!" FontWeight="Bold" FontSize="30" Margin="10" />
     </StackPanel>
 </Window>
